@@ -839,3 +839,102 @@
   background-size:cover;
   background-position:center 42%;
 }
+
+/* ===== FINAL RESPONSIVE OVERRIDES ===== */
+@media (min-width: 561px){
+  .hero-pillar-nav{
+    left:8vw;
+    right:8vw;
+    bottom:32px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+  }
+  .hero-pillar-nav a{
+    font-size:13px;
+    padding:11px 27px;
+    white-space:nowrap;
+  }
+}
+@media (max-width: 560px){
+  .hero-pillar-nav{
+    position:absolute;
+    left:7vw;
+    right:7vw;
+    bottom:24px;
+    display:grid;
+    grid-template-columns:1fr;
+    width:auto;
+    gap:0;
+    padding:8px 0 0;
+    border-top:1px solid rgba(255,255,255,.22);
+  }
+  .hero-pillar-nav a,
+  .hero-pillar-nav a:first-child{
+    width:100%;
+    min-height:32px;
+    display:grid;
+    grid-template-columns:28px 1fr 18px;
+    align-items:center;
+    column-gap:8px;
+    padding:6px 0;
+    border-left:0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    font-size:10px;
+    line-height:1.2;
+    white-space:nowrap;
+  }
+  .hero-pillar-nav a:last-child{
+    border-bottom:0;
+  }
+  .hero-pillar-nav span{
+    width:auto;
+    font-size:8px;
+    text-align:left;
+  }
+  .hero-pillar-nav b{
+    display:block;
+    margin-left:0;
+    text-align:right;
+    font-size:12px;
+  }
+  .hero-content{
+    padding-bottom:205px;
+  }
+  .hero-note{
+    display:none;
+  }
+}
+
+/* Keep the two requested Kindness visuals identical. */
+.pillar-image-kindness,
+.tier-image-kindness{
+  background-image:url("https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=2400&q=92");
+  background-size:cover;
+  background-position:center;
+}
+
+/* A brighter, optimistic community image for Start with One. */
+.join-image{
+  background-image:url("https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=2400&q=92");
+  background-size:cover;
+  background-position:center 42%;
+}
+
+/* Make Success and Join unmistakably different. */
+.success{
+  background:
+    radial-gradient(circle at 82% 20%, rgba(216,181,106,.16), transparent 28%),
+    linear-gradient(135deg,#102b3d 0%,#0a1e2d 100%);
+  color:#eef3f1;
+}
+.success .section-kicker{color:#d8b56a}
+.success h2{color:#f4f1e8}
+.success p,.success-metrics span{color:#c7d3d2}
+
+.movement-tiers{
+  background:
+    radial-gradient(circle at 10% 10%, rgba(155,113,48,.08), transparent 24%),
+    linear-gradient(135deg,#eee9de 0%,#f7f4ed 58%,#e5dfd2 100%);
+  color:#172a36;
+}
