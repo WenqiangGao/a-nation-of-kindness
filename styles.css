@@ -953,11 +953,78 @@
 
 /* Hero pillar links — larger on desktop, aligned on mobile */
 @media (min-width:561px){
-  .hero-pillar-nav a{font-size:16px;padding:14px 32px}
-  .hero-pillar-nav span{font-size:12px}
-  .hero-pillar-nav b{font-size:18px}
+  .hero-pillar-nav a{font-size:14px;padding:12px 29px}
+  .hero-pillar-nav span{font-size:9.5px}
+  .hero-pillar-nav b{font-size:17px}
 }
 @media (max-width:560px){
   .hero-pillar-nav a,
   .hero-pillar-nav a:first-child{font-size:10.5px}
 }
+
+.life-in-kind{padding:110px 8vw;background:#fffdf8;color:#172a36;border-top:1px solid rgba(23,42,54,.08);border-bottom:1px solid rgba(23,42,54,.08)}
+.life-in-kind-inner{max-width:1250px;margin:0 auto}
+.life-in-kind .section-kicker{color:#9b7130}
+.life-in-kind-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:7vw;align-items:center;margin-top:28px}
+.life-in-kind-copy h2{margin:0 0 28px;font-family:"Playfair Display",serif;font-size:clamp(52px,6vw,82px);line-height:.9;letter-spacing:-2px}
+.life-in-kind-copy h2 em{color:#9b7130}
+.life-in-kind-copy p{max-width:520px;font-size:15px;line-height:1.8;margin:0 0 18px}
+.life-in-kind-link{display:inline-flex;gap:12px;align-items:center;margin-top:18px;color:#9b7130;text-decoration:none;border-bottom:1px solid rgba(155,113,48,.45);padding-bottom:5px;font-size:11px;letter-spacing:1.2px;text-transform:uppercase}
+.life-in-kind-video-frame{position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#d9d2c3,#9b7130);overflow:hidden;box-shadow:0 24px 60px rgba(23,42,54,.14)}
+.life-in-kind-video-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(16,43,61,.12),rgba(155,113,48,.16))}
+.life-in-kind-play{position:absolute;z-index:2;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;background:#fff;color:#172a36;display:grid;place-items:center;font-size:18px;padding-left:4px;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+.life-in-kind-video-label{position:absolute;z-index:2;left:22px;bottom:20px;color:#fff;font-size:9px;letter-spacing:2px}
+.kindness-quote{margin:30px 0 0;padding:24px 0 0 24px;border-left:2px solid #9b7130}
+.kindness-quote p{font-family:"Playfair Display",serif;font-size:17px;line-height:1.55;margin:0 0 10px}
+.kindness-quote cite{display:block;font-size:11px;line-height:1.5;font-style:normal;color:#6e706f}
+@media(max-width:800px){.life-in-kind{padding:85px 7vw}.life-in-kind-grid{grid-template-columns:1fr;gap:42px}}
+@media(min-width:561px){.hero-pillar-nav a{font-size:15px;padding:13px 31px}.hero-pillar-nav span{font-size:10px}.hero-pillar-nav b{font-size:18px}}
+@media(max-width:560px){.hero-pillar-nav a,.hero-pillar-nav a:first-child{font-size:11px}}
+
+
+/* v19: Life in Kind refinement + direct Gan Jing World video preview */
+.life-in-kind-video-frame{position:relative;aspect-ratio:16/9;background:#0a2233;overflow:hidden;box-shadow:0 24px 60px rgba(23,42,54,.14)}
+.life-in-kind-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.life-in-kind-video-overlay{position:absolute;inset:0;z-index:3;display:block}
+.life-in-kind-video-label,.life-in-kind-play{display:none}
+@media (min-width:561px){
+  .hero-pillar-nav a{font-size:17px;padding:15px 36px;gap:18px}
+  .hero-pillar-nav span{font-size:11px}
+  .hero-pillar-nav b{font-size:20px}
+}
+@media (max-width:560px){
+  .hero-pillar-nav a,.hero-pillar-nav a:first-child{font-size:12px;padding:13px 18px}
+  .hero-pillar-nav{gap:8px}
+}
+
+/* v20: restore hero pillar links to v18 sizing */
+.hero-pillar-nav a{font-size:15px;padding:13px 31px}.hero-pillar-nav a span{font-size:10px}.hero-pillar-nav a b{font-size:18px}
+@media(max-width:560px){.hero-pillar-nav a{font-size:11px;padding:11px 12px}.hero-pillar-nav a b{font-size:16px}}
+
+
+/* v21 — Life in Kind fixes */
+.life-in-kind-channel{color:#9b7130;text-decoration:none;border-bottom:1px solid rgba(155,113,48,.45);transition:opacity .2s ease}
+.life-in-kind-channel:hover{opacity:.72}
+.life-in-kind-video-frame{display:block;position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#d9d2c3,#9b7130);overflow:hidden;box-shadow:0 24px 60px rgba(23,42,54,.14);text-decoration:none}
+.life-in-kind-video-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(16,43,61,.18),rgba(155,113,48,.22));pointer-events:none}
+.life-in-kind-video-placeholder{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.12),transparent 38%)}
+.life-in-kind-play{position:relative;z-index:2;width:72px;height:72px;border-radius:50%;background:#fff;color:#172a36;display:grid;place-items:center;font-size:18px;padding-left:4px;box-shadow:0 10px 30px rgba(0,0,0,.18);transition:transform .2s ease}
+.life-in-kind-video-frame:hover .life-in-kind-play{transform:scale(1.06)}
+.life-in-kind-video-label{position:absolute;z-index:2;left:22px;bottom:20px;color:#fff;font-size:9px;letter-spacing:2px}
+
+/* v22 — reliable Life in Kind visual preview */
+.life-in-kind-video-frame{position:relative;display:block;aspect-ratio:16/9;background:#172a36;overflow:hidden;box-shadow:0 24px 60px rgba(23,42,54,.14);text-decoration:none}
+.life-in-kind-video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s ease}
+.life-in-kind-video-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,43,61,.08) 20%,rgba(16,43,61,.66) 100%);z-index:1}
+.life-in-kind-video-placeholder{position:absolute;inset:0;display:block;z-index:2}
+.life-in-kind-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#fff;color:#172a36;display:grid;place-items:center;font-size:18px;padding-left:4px;box-shadow:0 10px 30px rgba(0,0,0,.22);transition:transform .2s ease}
+.life-in-kind-video-frame:hover .life-in-kind-play{transform:translate(-50%,-50%) scale(1.06)}
+.life-in-kind-video-frame:hover .life-in-kind-video-poster{transform:scale(1.025)}
+.life-in-kind-video-label{position:absolute;left:22px;bottom:20px;color:#fff;font-size:9px;letter-spacing:2px;line-height:1.4}
+
+
+/* v23 — Life in Kind poster + visible lower-right label */
+.life-in-kind-video-label{display:block !important;position:absolute;z-index:4;right:22px;left:auto;bottom:20px;color:#fff;font-size:9px;letter-spacing:2px;line-height:1.4;text-align:right;text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.life-in-kind-video-shade{z-index:1}
+.life-in-kind-video-placeholder{z-index:2}
+.life-in-kind-play{z-index:3}
