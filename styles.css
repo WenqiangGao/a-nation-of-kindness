@@ -1096,3 +1096,23 @@
   .hero-pillar-nav span{font-size:8px}
   .hero-pillar-nav b{font-size:12px}
 }
+
+
+/* v27 — force hero arrows visible on mobile */
+@media (max-width:560px){
+  .hero-pillar-nav a b{
+    display:block !important;
+    visibility:visible !important;
+    opacity:1 !important;
+    color:#d8b56a !important;
+    width:18px !important;
+    min-width:18px !important;
+    text-align:right !important;
+    font-size:13px !important;
+    line-height:1 !important;
+    position:static !important;
+  }
+}
+@media (max-width:380px){
+  .hero-pillar-nav a b{font-size:12px !important;width:18px !important;min-width:18px !important}
+}
