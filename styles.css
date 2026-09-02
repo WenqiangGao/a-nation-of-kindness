@@ -1028,3 +1028,48 @@
 .life-in-kind-video-shade{z-index:1}
 .life-in-kind-video-placeholder{z-index:2}
 .life-in-kind-play{z-index:3}
+
+
+/* v24 — mobile hero pillar navigation: equal-width, consistently aligned columns */
+@media (max-width:560px){
+  .hero-pillar-nav{
+    left:7vw;
+    right:7vw;
+    width:auto;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+    align-items:stretch;
+    flex-wrap:nowrap;
+  }
+  .hero-pillar-nav a,
+  .hero-pillar-nav a:first-child,
+  .hero-pillar-nav a:last-child{
+    width:100%;
+    min-width:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:11px 8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    text-align:center;
+    white-space:normal;
+    line-height:1.25;
+  }
+  .hero-pillar-nav span{flex:0 0 auto;font-size:9px}
+  .hero-pillar-nav b{flex:0 0 auto;font-size:15px}
+}
+@media (max-width:380px){
+  .hero-pillar-nav{gap:5px}
+  .hero-pillar-nav a,
+  .hero-pillar-nav a:first-child,
+  .hero-pillar-nav a:last-child{
+    padding:10px 4px;
+    font-size:10px;
+    gap:4px;
+  }
+  .hero-pillar-nav span{font-size:8px}
+  .hero-pillar-nav b{font-size:14px}
+}
